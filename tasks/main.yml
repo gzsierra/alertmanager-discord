@@ -13,7 +13,7 @@
     hostname: "alertmanager-discord"
     image: "alertmanager-discord"
     ports:
-      - "{{ discord_port }}:{{ blackbox_exdiscord_portorter_port }}"
+      - "{{ alertmanager_discord_port }}:{{ alertmanager_discord_port }}"
   tags: molecule-notest
   changed_when: false
   become: yes
