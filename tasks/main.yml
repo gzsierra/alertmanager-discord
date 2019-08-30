@@ -11,9 +11,9 @@
     recreate: true
     name: "alertmanager-discord"
     hostname: "alertmanager-discord"
-    image: "alertmanager-discord"
+    image: "funkypenguin/alertmanager-discord"
     ports:
-      - "{{ alertmanager_discord_port }}:{{ alertmanager_discord_port }}"
+      - "{{ alertmanager_discord_port }}:9094"
     env:
       DISCORD_WEBHOOK: '{{ discord_webhook }}'
   tags: molecule-notest

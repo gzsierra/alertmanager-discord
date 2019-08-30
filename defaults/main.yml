@@ -1,4 +1,4 @@
 ---
 # defaults file for alertmanager-discord
 alertmanager_discord_port: 9094
-discord_webhook: https://perdu.com
+discord_webhook: https://discord.com
