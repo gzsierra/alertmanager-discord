@@ -1,0 +1,3 @@
+---
+# defaults file for alertmanager-discord
+alertmanager-discord_port: 9094

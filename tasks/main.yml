@@ -1,0 +1,19 @@
+---
+# tasks file for alertmanager-discord
+
+- name: Pull docker file
+  docker_image:
+    name: funkypenguin/alertmanager-discord
+    source: pull
+
+- name: Create alermanager-discord container.
+  docker_container:
+    recreate: true
+    name: "alertmanager-discord"
+    hostname: "alertmanager-discord"
+    image: "alertmanager-discord"
+    ports:
+      - "{{ discord_port }}:{{ blackbox_exdiscord_portorter_port }}"
+  tags: molecule-notest
+  changed_when: false
+  become: yes
